@@ -4,72 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Complete Your Sofa Set | Top 15 Living Room Picks on Amazon Canada</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F4F1EC;
-    --surface: #FFFFFF;
-    --dark: #1A1714;
-    --mid: #3D3830;
-    --muted: #8C8479;
-    --accent: #B85C2A;
-    --accent-hover: #9E4D22;
-    --gold: #C49A3C;
-    --sage: #6B8F71;
-    --tag-bg: #EDE9E2;
-    --border: #E2DDD6;
-    --radius: 14px;
-    --card-shadow: 0 2px 12px rgba(26,23,20,0.07);
-    --card-shadow-hover: 0 12px 36px rgba(26,23,20,0.14);
+    --bg: #eaeded;
+    --surface: #ffffff;
+    --dark: #131921;
+    --mid: #232f3e;
+    --muted: #565959;
+    --accent: #ffd814;
+    --accent-hover: #f7ca00;
+    --gold: #ffa41c;
+    --sage: #067d62;
+    --tag-bg: #f7f8f8;
+    --border: #d5d9d9;
+    --radius: 8px;
+    --card-shadow: 0 2px 5px rgba(15, 17, 17, 0.12);
+    --card-shadow-hover: 0 2px 8px rgba(15, 17, 17, 0.18);
+    --link: #2162a1;
+    --link-hover: #c7511f;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body { font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: #0f1111; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
   /* Prevent any horizontal overflow */
   img, video { max-width: 100%; height: auto; }
 
-  #progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0; z-index: 1000; transition: width 0.08s linear; }
+  #progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0; z-index: 1000; transition: width 0.08s linear; }
 
   /* ── HEADER ── */
-  header { background: var(--dark); padding: 44px 20px 40px; position: relative; overflow: hidden; }
-  header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(196,154,60,0.4), transparent); }
-  .header-inner { max-width: 540px; }
-  .header-eyebrow { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; padding: 6px 14px; border: 1px solid rgba(196,154,60,0.3); border-radius: 100px; }
-  header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 9vw, 58px); font-weight: 600; line-height: 1.1; color: #F5F1EB; margin-bottom: 16px; }
-  header h1 em { font-style: italic; color: #D4895C; }
-  header p { font-size: 14px; font-weight: 300; color: #9A9189; line-height: 1.7; margin-bottom: 24px; }
-  .header-stats { display: flex; gap: 20px; flex-wrap: wrap; }
+  header { background: linear-gradient(180deg, var(--dark) 0%, var(--mid) 100%); padding: 20px 16px 24px; position: relative; overflow: hidden; border-bottom: 4px solid var(--gold); }
+  header::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.03), transparent 45%); pointer-events: none; }
+  header::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(255,255,255,0.08); }
+  .header-inner { max-width: 900px; position: relative; z-index: 1; }
+  .header-eyebrow { display: inline-flex; align-items: center; min-height: 28px; font-size: 12px; font-weight: 700; letter-spacing: 0.2px; color: #111; margin-bottom: 12px; padding: 0 12px; background: var(--accent); border: 1px solid #fcd200; border-radius: 999px; }
+  header h1 { font-size: clamp(28px, 7vw, 44px); font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 10px; }
+  header h1 em { font-style: normal; color: #ffbd69; }
+  header p { font-size: 14px; font-weight: 400; color: #d5dbdb; line-height: 1.5; margin-bottom: 18px; max-width: 760px; }
+  .header-stats { display: flex; gap: 12px; flex-wrap: wrap; }
   .stat { display: flex; flex-direction: column; gap: 2px; }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: #F5F1EB; line-height: 1; }
-  .stat-label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #6A635C; }
-  .stat-divider { width: 1px; background: #2E2B27; align-self: stretch; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #fff; line-height: 1; }
+  .stat-label { font-size: 11px; letter-spacing: 0.2px; text-transform: uppercase; color: #c6d0d8; }
+  .stat-divider { width: 1px; background: rgba(255,255,255,0.14); align-self: stretch; }
 
   /* ── FILTER BAR ── */
-  .filter-bar { position: sticky; top: 0; z-index: 200; background: rgba(244,241,236,0.97); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 14px; }
+  .filter-bar { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 14px; }
   .filter-scroll { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
   .filter-scroll::-webkit-scrollbar { display: none; }
   /* Large tap targets for mobile */
-  .filter-btn { flex-shrink: 0; min-height: 44px; padding: 0 18px; border-radius: 100px; border: 1.5px solid var(--border); background: transparent; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.18s ease; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
-  .filter-btn.active { background: var(--dark); border-color: var(--dark); color: #F5F1EB; }
-  @media (hover: hover) { .filter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); } }
+  .filter-btn { flex-shrink: 0; min-height: 38px; padding: 0 16px; border-radius: 999px; border: 1px solid #c7d0d0; background: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 700; color: #0f1111; cursor: pointer; transition: all 0.18s ease; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+  .filter-btn.active { background: #fff7e6; border-color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); color: #0f1111; }
+  @media (hover: hover) { .filter-btn:hover:not(.active) { border-color: #879596; background: #f7fafa; } }
 
   /* ── META BAR ── */
-  .meta-bar { padding: 14px 16px 4px; display: flex; align-items: center; justify-content: space-between; }
+  .meta-bar { padding: 14px 16px 4px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .meta-count { font-size: 13px; color: var(--muted); }
-  .meta-count strong { color: var(--dark); font-weight: 600; }
+  .meta-count strong { color: #0f1111; font-weight: 700; }
   .affiliate-note { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
   .affiliate-dot { width: 6px; height: 6px; background: var(--sage); border-radius: 50%; flex-shrink: 0; }
 
   /* ── GRID ── */
-  .grid { padding: 10px 10px 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .grid { padding: 10px 10px 80px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   @media (min-width: 560px) { .grid { gap: 14px; padding: 14px 14px 80px; } }
   @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); padding: 18px 18px 80px; } }
   @media (min-width: 1100px) { .grid { grid-template-columns: repeat(4, 1fr); max-width: 1280px; margin: 0 auto; padding: 20px 20px 100px; } }
 
   /* ── CARD ── */
-  .card { background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; animation: rise 0.5s ease both; }
-  @media (hover: hover) { .card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow-hover); } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); display: flex; flex-direction: column; transition: border-color 0.2s ease, box-shadow 0.2s ease; animation: rise 0.35s ease both; text-decoration: none; color: inherit; cursor: pointer; }
+  @media (hover: hover) { .card:hover { border-color: #f90; box-shadow: var(--card-shadow-hover); } }
+  .card:focus-visible { outline: 3px solid #007185; outline-offset: 2px; }
   .card.hidden { display: none !important; }
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
   .card:nth-child(1){animation-delay:.04s}.card:nth-child(2){animation-delay:.08s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.16s}.card:nth-child(5){animation-delay:.20s}.card:nth-child(6){animation-delay:.24s}.card:nth-child(7){animation-delay:.28s}.card:nth-child(8){animation-delay:.32s}.card:nth-child(9){animation-delay:.36s}.card:nth-child(10){animation-delay:.40s}.card:nth-child(11){animation-delay:.44s}.card:nth-child(12){animation-delay:.48s}.card:nth-child(13){animation-delay:.52s}.card:nth-child(14){animation-delay:.56s}.card:nth-child(15){animation-delay:.60s}
@@ -79,46 +82,50 @@
   .card.wide .card-img { width: 100%; aspect-ratio: 16 / 7; }
   @media (min-width: 560px) {
     .card.wide { flex-direction: row; }
-    .card.wide .card-img { width: 220px; min-width: 220px; aspect-ratio: unset; border-radius: 0; }
+    .card.wide .card-img { width: 240px; min-width: 240px; aspect-ratio: unset; border-radius: 0; }
   }
 
   /* ── CARD IMAGE ── */
-  .card-img { aspect-ratio: 4 / 3; overflow: hidden; position: relative; background: var(--tag-bg); flex-shrink: 0; }
-  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-  @media (hover: hover) { .card:hover .card-img img { transform: scale(1.05); } }
-  .badge-cat { position: absolute; bottom: 8px; left: 8px; background: rgba(26,23,20,0.75); backdrop-filter: blur(4px); color: #F5F1EB; font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
-  .badge-pick { position: absolute; top: 10px; right: 10px; background: var(--gold); color: var(--dark); font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 9px; border-radius: 6px; }
+  .card-img { aspect-ratio: 4 / 3; overflow: hidden; position: relative; background: #fff; flex-shrink: 0; border-bottom: 1px solid var(--border); }
+  .card-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; padding: 12px; background: #fff; display: block; transition: transform 0.5s ease; }
+  .card.wide .card-img img { padding: 16px; }
+  @media (hover: hover) { .card:hover .card-img img { transform: scale(1.02); } }
+  .badge-cat { position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.96); color: #0f1111; font-size: 10px; font-weight: 700; letter-spacing: 0.2px; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; }
+  .badge-pick { position: absolute; top: 10px; right: 10px; background: #cc0c39; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.2px; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; }
 
   /* ── CARD BODY ── */
-  .card-body { padding: 14px 14px 16px; display: flex; flex-direction: column; flex: 1; gap: 5px; }
-  .card-brand { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
-  .card-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(15px, 4vw, 18px); font-weight: 600; line-height: 1.25; color: var(--dark); }
-  .card-desc { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.6; flex: 1; margin-top: 2px; }
+  .card-body { padding: 14px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+  .card-brand { font-size: 11px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #6f7373; }
+  .card-name { font-size: clamp(15px, 4vw, 20px); font-weight: 400; line-height: 1.3; color: var(--link); }
+  .card-desc { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.5; flex: 1; margin-top: 2px; }
   .card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; gap: 8px; flex-wrap: wrap; }
   .card-stars { display: flex; align-items: center; gap: 3px; font-size: 12px; }
   .stars-filled { color: var(--gold); letter-spacing: 1px; }
   .stars-count { color: var(--muted); font-size: 11px; }
-  .card-price { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--dark); white-space: nowrap; }
-  .card-price sup { font-size: 12px; font-family: 'Outfit', sans-serif; font-weight: 400; }
-  .card-price sub { font-size: 11px; font-family: 'Outfit', sans-serif; font-weight: 300; color: var(--muted); }
-
-  /* ── CTA BUTTON — minimum 48px tap target ── */
-  .btn-amazon { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 12px; min-height: 48px; padding: 0 16px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; text-decoration: none; cursor: pointer; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
-  @media (hover: hover) { .btn-amazon:hover { background: var(--accent-hover); } }
-  .btn-amazon:active { background: var(--accent-hover); transform: scale(0.98); }
-  .btn-arrow { font-size: 15px; display: inline-block; }
+  .card-price { font-size: 28px; font-weight: 400; color: #0f1111; white-space: nowrap; line-height: 1; }
+  .card-price sup { font-size: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: 400; top: -0.5em; }
+  .card-price sub { font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: 400; color: var(--muted); bottom: 0; }
 
   /* ── FOOTER ── */
-  footer { background: var(--dark); padding: 36px 20px 48px; text-align: center; }
-  .footer-wordmark { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: #F5F1EB; margin-bottom: 14px; }
-  footer p { font-size: 12px; font-weight: 300; color: #5A554F; line-height: 1.8; max-width: 480px; margin: 0 auto; }
-  footer a { color: var(--gold); text-decoration: none; }
+  footer { background: var(--mid); padding: 32px 20px 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-wordmark { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 14px; }
+  footer p { font-size: 12px; font-weight: 400; color: #d5dbdb; line-height: 1.7; max-width: 560px; margin: 0 auto; }
+  footer a { color: #ffbd69; text-decoration: none; }
 
   /* ── BACK TO TOP — safe area aware ── */
-  #backTop { position: fixed; bottom: calc(20px + env(safe-area-inset-bottom)); right: 16px; width: 48px; height: 48px; background: var(--dark); color: #F5F1EB; border: 1px solid #2E2B27; border-radius: 50%; font-size: 18px; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 500; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
+  #backTop { position: fixed; bottom: calc(20px + env(safe-area-inset-bottom)); right: 16px; width: 44px; height: 44px; background: var(--mid); color: #fff; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; font-size: 18px; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(15,17,17,0.25); z-index: 500; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
   #backTop.visible { display: flex; }
-  #backTop:active { background: var(--accent); border-color: var(--accent); }
-  @media (hover: hover) { #backTop:hover { background: var(--accent); border-color: var(--accent); } }
+  #backTop:active { background: var(--gold); border-color: var(--gold); color: #111; }
+  @media (hover: hover) { #backTop:hover { background: var(--gold); border-color: var(--gold); color: #111; } }
+
+  @media (hover: hover) {
+    .card-name:hover { color: var(--link-hover); }
+  }
+
+  @media (max-width: 640px) {
+    .meta-bar { flex-direction: column; align-items: flex-start; }
+    .card-price { font-size: 24px; }
+  }
 </style>
 </head>
 <body>
@@ -128,15 +135,8 @@
 <header>
   <div class="header-inner">
     <span class="header-eyebrow">Living Room Guide</span>
-    <h1>Bought a Sofa?<br><em>Here's What's Next.</em></h1>
+    <h1>Amazon <em>Living Room Guide</em></h1>
     <p>15 hand-picked products that complete any living room setup — all available on Amazon Canada with fast delivery.</p>
-    <div class="header-stats">
-      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Products</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Categories</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">CA</span><span class="stat-label">Amazon.ca</span></div>
-    </div>
   </div>
 </header>
 
@@ -158,7 +158,7 @@
 <div class="grid" id="grid">
 
   <!-- 1 WIDE -->
-  <div class="card wide" data-cat="furniture">
+  <a class="card wide" data-cat="furniture" href="https://amzn.to/4tO2QcI" target="_blank" rel="noopener sponsored">
     <div class="card-img">
       <img src="https://m.media-amazon.com/images/I/813HT1RLiQL._AC_SL1500_.jpg?w=600&q=80&fit=crop" alt="Modern living room with sofa and coffee table" loading="lazy">
       <span class="badge-cat">Furniture</span>
@@ -172,14 +172,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6 (2.4K)</span></div>
         <div class="card-price"><sup>CA</sup>$79<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://amzn.to/4tO2QcI" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 2 -->
-  <div class="card" data-cat="furniture">
+  <a class="card" data-cat="furniture" href="https://amzn.to/42ebcyw" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80&fit=crop" alt="Side table with lamp next to sofa" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/61vrl+ZoT-L._AC_SX679_.jpg" alt="Side table with lamp next to sofa" loading="lazy">
       <span class="badge-cat">Furniture</span>
     </div>
     <div class="card-body">
@@ -190,14 +189,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.7</span></div>
         <div class="card-price"><sup>CA</sup>$55<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=HOOBRO+end+table+charging+station+USB&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 3 -->
-  <div class="card" data-cat="furniture">
+  <a class="card" data-cat="furniture" href="https://amzn.to/4cPXtUD" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80&fit=crop" alt="Accent armchair in modern living room" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/811cx3UqduL._AC_SX679_.jpg" alt="Accent armchair in modern living room" loading="lazy">
       <span class="badge-cat">Furniture</span>
     </div>
     <div class="card-body">
@@ -208,14 +206,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
         <div class="card-price"><sup>CA</sup>$129<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=CANMOV+modern+accent+chair+lumbar+pillow&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 4 -->
-  <div class="card" data-cat="furniture">
+  <a class="card" data-cat="furniture" href="https://amzn.to/41B6t9Z" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80&fit=crop" alt="Lounge chair with ottoman in living room" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/61+UdxrZ+uL._AC_UL320_.jpg" alt="Lounge chair with ottoman in living room" loading="lazy">
       <span class="badge-cat">Furniture</span>
     </div>
     <div class="card-body">
@@ -226,14 +223,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.3</span></div>
         <div class="card-price"><sup>CA</sup>$149<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Tiita+lazy+chair+with+ottoman+living+room&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 5 -->
-  <div class="card" data-cat="furniture">
+  <a class="card" data-cat="furniture" href="https://amzn.to/486GhYo" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fit=crop" alt="Narrow console table against wall" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/81lQAEtCybL._AC_UL320_.jpg" alt="Narrow console table against wall" loading="lazy">
       <span class="badge-cat">Furniture</span>
     </div>
     <div class="card-body">
@@ -244,14 +240,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6</span></div>
         <div class="card-price"><sup>CA</sup>$65<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=HOOBRO+narrow+console+table+75cm&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 6 -->
-  <div class="card" data-cat="furniture">
+  <a class="card" data-cat="furniture" href="https://amzn.to/3OlBcEZ" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=80&fit=crop" alt="Modern TV media unit in living room" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/71tBa5QcVZL._AC_UL320_.jpg" alt="Modern TV media unit in living room" loading="lazy">
       <span class="badge-cat">Furniture</span>
     </div>
     <div class="card-body">
@@ -262,14 +257,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
         <div class="card-price"><sup>CA</sup>$189<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=SONGMICS+TV+stand+70+inch+ULGS043B101S&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 7 WIDE -->
-  <div class="card wide" data-cat="textiles">
+  <a class="card wide" data-cat="textiles" href="https://amzn.to/4mAKPvW" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1540730930991-a9286a5f5020?w=600&q=80&fit=crop" alt="Decorative throw pillows on neutral sofa" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/81acVMqDBqL._AC_UL320_.jpg" alt="Decorative throw pillows on neutral sofa" loading="lazy">
       <span class="badge-cat">Textiles</span>
       <span class="badge-pick">Best Seller</span>
     </div>
@@ -281,14 +275,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.8 (12K+)</span></div>
         <div class="card-price"><sup>CA</sup>$18<sub>/2pk</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=MIULEE+linen+pillow+covers+beige+18x18&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 8 -->
-  <div class="card" data-cat="textiles">
+  <a class="card" data-cat="textiles" href="https://amzn.to/4cvy2GJ" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=600&q=80&fit=crop" alt="White decorative throw pillow inserts" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/517mZU+9JXL._AC_UL320_.jpg" alt="White decorative throw pillow inserts" loading="lazy">
       <span class="badge-cat">Textiles</span>
     </div>
     <div class="card-body">
@@ -299,14 +292,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
         <div class="card-price"><sup>CA</sup>$24<sub>/4pk</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Utopia+Bedding+throw+pillow+inserts+4+pack+18x18&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 9 -->
-  <div class="card" data-cat="textiles">
+  <a class="card" data-cat="textiles" href="https://amzn.to/4vx4Pnz" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1601366533287-5ee4c763ae4e?w=600&q=80&fit=crop" alt="Soft grey throw blanket draped on couch" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/91FN20VMj2L._AC_UL320_.jpg" alt="Soft grey throw blanket draped on couch" loading="lazy">
       <span class="badge-cat">Textiles</span>
     </div>
     <div class="card-body">
@@ -317,14 +309,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.7</span></div>
         <div class="card-price"><sup>CA</sup>$22<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Bedsure+fleece+throw+blanket+couch+grey&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 10 -->
-  <div class="card" data-cat="textiles">
+  <a class="card" data-cat="textiles" href="https://amzn.to/4tOgI6H" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&q=80&fit=crop" alt="Linen curtains in bright living room" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/815UWwMQCCL._AC_SX208_CB1169409_QL70_.jpg" alt="Linen curtains in bright living room" loading="lazy">
       <span class="badge-cat">Textiles</span>
     </div>
     <div class="card-body">
@@ -335,14 +326,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
         <div class="card-price"><sup>CA</sup>$35<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=MYSKY+HOME+linen+curtains+84+inch+back+tab&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 11 -->
-  <div class="card" data-cat="textiles">
+  <a class="card" data-cat="textiles" href="https://amzn.to/48CA7zo" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80&fit=crop" alt="Large area rug under living room furniture" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/81hc5A1YahL._AC_SL1500_.jpg" alt="Large area rug under living room furniture" loading="lazy">
       <span class="badge-cat">Textiles</span>
     </div>
     <div class="card-body">
@@ -353,50 +343,47 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.3</span></div>
         <div class="card-price"><sup>CA</sup>$89<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Pauwer+area+rug+8x10+washable+non+slip&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 12 -->
-  <div class="card" data-cat="lighting">
+  <a class="card" data-cat="lighting" href="https://amzn.to/4mxNLcN" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80&fit=crop" alt="Tall floor lamp in living room corner" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/71LC9-M5eyL._AC_SX679_.jpg" alt="Tall floor lamp in living room corner" loading="lazy">
       <span class="badge-cat">Lighting</span>
     </div>
     <div class="card-body">
-      <div class="card-brand">—</div>
+      <div class="card-brand">EDISHINE</div>
       <div class="card-name">Floor Lamp with Linen Shade</div>
       <div class="card-desc">67.5" standing lamp, 3 colour temperatures, pull chain switch. Boho linen shade that diffuses warm ambient light.</div>
       <div class="card-meta">
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
         <div class="card-price"><sup>CA</sup>$59<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=floor+lamp+3+color+temperature+linen+shade+living+room&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 13 -->
-  <div class="card" data-cat="lighting">
+  <a class="card" data-cat="lighting" href="https://amzn.to/4cUxz19" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1513506003901-1e6a35499d71?w=600&q=80&fit=crop" alt="Ceramic bedside table lamp with fabric shade" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/818OSF2KfCL._AC_SX679_.jpg" alt="Ceramic bedside table lamp with fabric shade" loading="lazy">
       <span class="badge-cat">Lighting</span>
     </div>
     <div class="card-body">
-      <div class="card-brand">—</div>
+      <div class="card-brand">FARMHOUSE</div>
       <div class="card-name">Ceramic Table Lamp — Set of 2</div>
       <div class="card-desc">24.8" farmhouse lamps with fabric drum shade and 3-colour temperature. Ideal for matching end tables on either side of the sofa.</div>
       <div class="card-meta">
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
         <div class="card-price"><sup>CA</sup>$69<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=ceramic+table+lamps+set+of+2+farmhouse+3+color+temperature&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 14 -->
-  <div class="card" data-cat="decor">
+  <a class="card" data-cat="decor" href="https://amzn.to/4vCB9oT" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&fit=crop" alt="Small potted plant on shelf decor" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/81b0GCf0zdL._AC_SL1500_.jpg" alt="Small potted plant on shelf decor" loading="lazy">
       <span class="badge-cat">Decor</span>
     </div>
     <div class="card-body">
@@ -407,14 +394,13 @@
         <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6</span></div>
         <div class="card-price"><sup>CA</sup>$16<sub>/2pk</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Coferset+fake+eucalyptus+potted+artificial+plants&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
   <!-- 15 -->
-  <div class="card" data-cat="decor">
+  <a class="card" data-cat="decor" href="https://amzn.to/4cj98vb" target="_blank" rel="noopener sponsored">
     <div class="card-img">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80&fit=crop" alt="Round black wall mirror in living room" loading="lazy">
+      <img src="https://m.media-amazon.com/images/I/81O5y5p+kXL._AC_SL1500_.jpg" alt="Round black wall mirror in living room" loading="lazy">
       <span class="badge-cat">Decor</span>
     </div>
     <div class="card-body">
@@ -425,20 +411,10 @@
         <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
         <div class="card-price"><sup>CA</sup>$45<sub>+</sub></div>
       </div>
-      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Growsun+black+round+wall+mirror+24+inch&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
     </div>
-  </div>
+  </a>
 
 </div>
-
-<footer>
-  <div class="footer-wordmark">Living Room Guide</div>
-  <p>
-    This page contains Amazon affiliate links. If you purchase through a link, we may earn a small commission at no additional cost to you.<br><br>
-    All prices listed are approximate starting prices in Canadian dollars and may vary.<br>
-    <a href="https://www.amazon.ca" target="_blank">amazon.ca</a> &nbsp;&middot;&nbsp; Product availability subject to change.
-  </p>
-</footer>
 
 <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
