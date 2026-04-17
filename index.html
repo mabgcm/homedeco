@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Your Sofa Set | Top 15 Living Room Picks on Amazon Canada</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F1EC;
+    --surface: #FFFFFF;
+    --dark: #1A1714;
+    --mid: #3D3830;
+    --muted: #8C8479;
+    --accent: #B85C2A;
+    --accent-hover: #9E4D22;
+    --gold: #C49A3C;
+    --sage: #6B8F71;
+    --tag-bg: #EDE9E2;
+    --border: #E2DDD6;
+    --radius: 14px;
+    --card-shadow: 0 2px 12px rgba(26,23,20,0.07);
+    --card-shadow-hover: 0 12px 36px rgba(26,23,20,0.14);
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+  /* Prevent any horizontal overflow */
+  img, video { max-width: 100%; height: auto; }
+
+  #progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0; z-index: 1000; transition: width 0.08s linear; }
+
+  /* ── HEADER ── */
+  header { background: var(--dark); padding: 44px 20px 40px; position: relative; overflow: hidden; }
+  header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(196,154,60,0.4), transparent); }
+  .header-inner { max-width: 540px; }
+  .header-eyebrow { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; padding: 6px 14px; border: 1px solid rgba(196,154,60,0.3); border-radius: 100px; }
+  header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 9vw, 58px); font-weight: 600; line-height: 1.1; color: #F5F1EB; margin-bottom: 16px; }
+  header h1 em { font-style: italic; color: #D4895C; }
+  header p { font-size: 14px; font-weight: 300; color: #9A9189; line-height: 1.7; margin-bottom: 24px; }
+  .header-stats { display: flex; gap: 20px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: #F5F1EB; line-height: 1; }
+  .stat-label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #6A635C; }
+  .stat-divider { width: 1px; background: #2E2B27; align-self: stretch; }
+
+  /* ── FILTER BAR ── */
+  .filter-bar { position: sticky; top: 0; z-index: 200; background: rgba(244,241,236,0.97); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 14px; }
+  .filter-scroll { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
+  .filter-scroll::-webkit-scrollbar { display: none; }
+  /* Large tap targets for mobile */
+  .filter-btn { flex-shrink: 0; min-height: 44px; padding: 0 18px; border-radius: 100px; border: 1.5px solid var(--border); background: transparent; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.18s ease; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+  .filter-btn.active { background: var(--dark); border-color: var(--dark); color: #F5F1EB; }
+  @media (hover: hover) { .filter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); } }
+
+  /* ── META BAR ── */
+  .meta-bar { padding: 14px 16px 4px; display: flex; align-items: center; justify-content: space-between; }
+  .meta-count { font-size: 13px; color: var(--muted); }
+  .meta-count strong { color: var(--dark); font-weight: 600; }
+  .affiliate-note { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+  .affiliate-dot { width: 6px; height: 6px; background: var(--sage); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── GRID ── */
+  .grid { padding: 10px 10px 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 560px) { .grid { gap: 14px; padding: 14px 14px 80px; } }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); padding: 18px 18px 80px; } }
+  @media (min-width: 1100px) { .grid { grid-template-columns: repeat(4, 1fr); max-width: 1280px; margin: 0 auto; padding: 20px 20px 100px; } }
+
+  /* ── CARD ── */
+  .card { background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; animation: rise 0.5s ease both; }
+  @media (hover: hover) { .card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow-hover); } }
+  .card.hidden { display: none !important; }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .card:nth-child(1){animation-delay:.04s}.card:nth-child(2){animation-delay:.08s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.16s}.card:nth-child(5){animation-delay:.20s}.card:nth-child(6){animation-delay:.24s}.card:nth-child(7){animation-delay:.28s}.card:nth-child(8){animation-delay:.32s}.card:nth-child(9){animation-delay:.36s}.card:nth-child(10){animation-delay:.40s}.card:nth-child(11){animation-delay:.44s}.card:nth-child(12){animation-delay:.48s}.card:nth-child(13){animation-delay:.52s}.card:nth-child(14){animation-delay:.56s}.card:nth-child(15){animation-delay:.60s}
+
+  /* Wide card: stacks vertically on small screens, horizontal on larger */
+  .card.wide { grid-column: 1 / -1; flex-direction: column; }
+  .card.wide .card-img { width: 100%; aspect-ratio: 16 / 7; }
+  @media (min-width: 560px) {
+    .card.wide { flex-direction: row; }
+    .card.wide .card-img { width: 220px; min-width: 220px; aspect-ratio: unset; border-radius: 0; }
+  }
+
+  /* ── CARD IMAGE ── */
+  .card-img { aspect-ratio: 4 / 3; overflow: hidden; position: relative; background: var(--tag-bg); flex-shrink: 0; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  @media (hover: hover) { .card:hover .card-img img { transform: scale(1.05); } }
+  .badge-cat { position: absolute; bottom: 8px; left: 8px; background: rgba(26,23,20,0.75); backdrop-filter: blur(4px); color: #F5F1EB; font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+  .badge-pick { position: absolute; top: 10px; right: 10px; background: var(--gold); color: var(--dark); font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 9px; border-radius: 6px; }
+
+  /* ── CARD BODY ── */
+  .card-body { padding: 14px 14px 16px; display: flex; flex-direction: column; flex: 1; gap: 5px; }
+  .card-brand { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .card-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(15px, 4vw, 18px); font-weight: 600; line-height: 1.25; color: var(--dark); }
+  .card-desc { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.6; flex: 1; margin-top: 2px; }
+  .card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; gap: 8px; flex-wrap: wrap; }
+  .card-stars { display: flex; align-items: center; gap: 3px; font-size: 12px; }
+  .stars-filled { color: var(--gold); letter-spacing: 1px; }
+  .stars-count { color: var(--muted); font-size: 11px; }
+  .card-price { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--dark); white-space: nowrap; }
+  .card-price sup { font-size: 12px; font-family: 'Outfit', sans-serif; font-weight: 400; }
+  .card-price sub { font-size: 11px; font-family: 'Outfit', sans-serif; font-weight: 300; color: var(--muted); }
+
+  /* ── CTA BUTTON — minimum 48px tap target ── */
+  .btn-amazon { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 12px; min-height: 48px; padding: 0 16px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; text-decoration: none; cursor: pointer; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
+  @media (hover: hover) { .btn-amazon:hover { background: var(--accent-hover); } }
+  .btn-amazon:active { background: var(--accent-hover); transform: scale(0.98); }
+  .btn-arrow { font-size: 15px; display: inline-block; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--dark); padding: 36px 20px 48px; text-align: center; }
+  .footer-wordmark { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: #F5F1EB; margin-bottom: 14px; }
+  footer p { font-size: 12px; font-weight: 300; color: #5A554F; line-height: 1.8; max-width: 480px; margin: 0 auto; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── BACK TO TOP — safe area aware ── */
+  #backTop { position: fixed; bottom: calc(20px + env(safe-area-inset-bottom)); right: 16px; width: 48px; height: 48px; background: var(--dark); color: #F5F1EB; border: 1px solid #2E2B27; border-radius: 50%; font-size: 18px; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 500; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
+  #backTop.visible { display: flex; }
+  #backTop:active { background: var(--accent); border-color: var(--accent); }
+  @media (hover: hover) { #backTop:hover { background: var(--accent); border-color: var(--accent); } }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <div class="header-inner">
+    <span class="header-eyebrow">Living Room Guide</span>
+    <h1>Bought a Sofa?<br><em>Here's What's Next.</em></h1>
+    <p>15 hand-picked products that complete any living room setup — all available on Amazon Canada with fast delivery.</p>
+    <div class="header-stats">
+      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Products</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Categories</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">CA</span><span class="stat-label">Amazon.ca</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-scroll">
+    <button class="filter-btn active" onclick="filter('all',this)">All</button>
+    <button class="filter-btn" onclick="filter('furniture',this)">Furniture</button>
+    <button class="filter-btn" onclick="filter('textiles',this)">Textiles</button>
+    <button class="filter-btn" onclick="filter('lighting',this)">Lighting</button>
+    <button class="filter-btn" onclick="filter('decor',this)">Decor</button>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-count" id="countBar"><strong>15</strong> products shown</div>
+  <div class="affiliate-note"><div class="affiliate-dot"></div> Affiliate links</div>
+</div>
+
+<div class="grid" id="grid">
+
+  <!-- 1 WIDE -->
+  <div class="card wide" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&fit=crop" alt="Modern living room with sofa and coffee table" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+      <span class="badge-pick">Top Pick</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">VASAGLE</div>
+      <div class="card-name">MAEZO Round Coffee Table</div>
+      <div class="card-desc">2-tier centre table with storage shelf, tapered legs and curved transitions. Honey brown finish that works with any sofa colour.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6 (2.4K)</span></div>
+        <div class="card-price"><sup>CA</sup>$79<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=VASAGLE+MAEZO+round+coffee+table&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80&fit=crop" alt="Side table with lamp next to sofa" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">HOOBRO</div>
+      <div class="card-name">End Table with Charging Station</div>
+      <div class="card-desc">3-tier side table with USB ports and power outlet. Keeps devices charged right next to the sofa.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.7</span></div>
+        <div class="card-price"><sup>CA</sup>$55<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=HOOBRO+end+table+charging+station+USB&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80&fit=crop" alt="Accent armchair in modern living room" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">CANMOV</div>
+      <div class="card-name">Mid-Century Accent Chair</div>
+      <div class="card-desc">Upholstered armchair with lumbar pillow, thick seat cushion and solid wood frame. Available in beige and grey.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
+        <div class="card-price"><sup>CA</sup>$129<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=CANMOV+modern+accent+chair+lumbar+pillow&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80&fit=crop" alt="Lounge chair with ottoman in living room" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Tiita</div>
+      <div class="card-name">Lounge Chair with Ottoman</div>
+      <div class="card-desc">Oversized reading chair with matching footrest. Deep seat and wide armrests for maximum comfort.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.3</span></div>
+        <div class="card-price"><sup>CA</sup>$149<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Tiita+lazy+chair+with+ottoman+living+room&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fit=crop" alt="Narrow console table against wall" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">HOOBRO</div>
+      <div class="card-name">Narrow Console Table</div>
+      <div class="card-desc">75 cm slim sofa table. Perfect behind the couch or in the hallway. Rustic brown and black finish.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6</span></div>
+        <div class="card-price"><sup>CA</sup>$65<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=HOOBRO+narrow+console+table+75cm&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card" data-cat="furniture">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=80&fit=crop" alt="Modern TV media unit in living room" loading="lazy">
+      <span class="badge-cat">Furniture</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">SONGMICS</div>
+      <div class="card-name">TV Stand — Up to 70"</div>
+      <div class="card-desc">11-drawer modern media unit in ink black. Fits TVs up to 70 inches with plenty of storage below.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
+        <div class="card-price"><sup>CA</sup>$189<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=SONGMICS+TV+stand+70+inch+ULGS043B101S&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 7 WIDE -->
+  <div class="card wide" data-cat="textiles">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1540730930991-a9286a5f5020?w=600&q=80&fit=crop" alt="Decorative throw pillows on neutral sofa" loading="lazy">
+      <span class="badge-cat">Textiles</span>
+      <span class="badge-pick">Best Seller</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">MIULEE</div>
+      <div class="card-name">Linen Throw Pillow Covers — Set of 2</div>
+      <div class="card-desc">Soft boho farmhouse covers in natural beige, 18x18". Over 12,000 five-star reviews. Zip closure, machine washable.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.8 (12K+)</span></div>
+        <div class="card-price"><sup>CA</sup>$18<sub>/2pk</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=MIULEE+linen+pillow+covers+beige+18x18&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="card" data-cat="textiles">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=600&q=80&fit=crop" alt="White decorative throw pillow inserts" loading="lazy">
+      <span class="badge-cat">Textiles</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Utopia Bedding</div>
+      <div class="card-name">Pillow Inserts — Set of 4</div>
+      <div class="card-desc">Down-alternative stuffed inserts, 18x18", white. Pairs with any pillow cover for a full, hotel-quality look.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
+        <div class="card-price"><sup>CA</sup>$24<sub>/4pk</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Utopia+Bedding+throw+pillow+inserts+4+pack+18x18&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="card" data-cat="textiles">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1601366533287-5ee4c763ae4e?w=600&q=80&fit=crop" alt="Soft grey throw blanket draped on couch" loading="lazy">
+      <span class="badge-cat">Textiles</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Bedsure</div>
+      <div class="card-name">Fleece Throw Blanket</div>
+      <div class="card-desc">50x60" ultra-soft grey fleece. Lightweight yet warm — the couch staple for Canadian winters.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.7</span></div>
+        <div class="card-price"><sup>CA</sup>$22<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Bedsure+fleece+throw+blanket+couch+grey&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="card" data-cat="textiles">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&q=80&fit=crop" alt="Linen curtains in bright living room" loading="lazy">
+      <span class="badge-cat">Textiles</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">MYSKY HOME</div>
+      <div class="card-name">Linen Curtains 84" — 2 Panels</div>
+      <div class="card-desc">Semi-sheer, back tab, natural linen look. Light filtering with privacy. Farmhouse feel, 52" wide each panel.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
+        <div class="card-price"><sup>CA</sup>$35<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=MYSKY+HOME+linen+curtains+84+inch+back+tab&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="card" data-cat="textiles">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80&fit=crop" alt="Large area rug under living room furniture" loading="lazy">
+      <span class="badge-cat">Textiles</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Pauwer</div>
+      <div class="card-name">Washable Area Rug — 8x10</div>
+      <div class="card-desc">Machine washable, non-slip backing, boho pattern. Ties the entire sofa arrangement together on hardwood or tile.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.3</span></div>
+        <div class="card-price"><sup>CA</sup>$89<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Pauwer+area+rug+8x10+washable+non+slip&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="card" data-cat="lighting">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80&fit=crop" alt="Tall floor lamp in living room corner" loading="lazy">
+      <span class="badge-cat">Lighting</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">—</div>
+      <div class="card-name">Floor Lamp with Linen Shade</div>
+      <div class="card-desc">67.5" standing lamp, 3 colour temperatures, pull chain switch. Boho linen shade that diffuses warm ambient light.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
+        <div class="card-price"><sup>CA</sup>$59<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=floor+lamp+3+color+temperature+linen+shade+living+room&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="card" data-cat="lighting">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1513506003901-1e6a35499d71?w=600&q=80&fit=crop" alt="Ceramic bedside table lamp with fabric shade" loading="lazy">
+      <span class="badge-cat">Lighting</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">—</div>
+      <div class="card-name">Ceramic Table Lamp — Set of 2</div>
+      <div class="card-desc">24.8" farmhouse lamps with fabric drum shade and 3-colour temperature. Ideal for matching end tables on either side of the sofa.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.4</span></div>
+        <div class="card-price"><sup>CA</sup>$69<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=ceramic+table+lamps+set+of+2+farmhouse+3+color+temperature&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="card" data-cat="decor">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&fit=crop" alt="Small potted plant on shelf decor" loading="lazy">
+      <span class="badge-cat">Decor</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Coferset</div>
+      <div class="card-name">Faux Eucalyptus Potted Plants — Set of 2</div>
+      <div class="card-desc">Realistic artificial plants in small pots. Zero maintenance, sage green colour that works on shelves, TV units or coffee tables.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★★</span><span class="stars-count">4.6</span></div>
+        <div class="card-price"><sup>CA</sup>$16<sub>/2pk</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Coferset+fake+eucalyptus+potted+artificial+plants&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="card" data-cat="decor">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80&fit=crop" alt="Round black wall mirror in living room" loading="lazy">
+      <span class="badge-cat">Decor</span>
+    </div>
+    <div class="card-body">
+      <div class="card-brand">Growsun</div>
+      <div class="card-name">Round Wall Mirror — 24"</div>
+      <div class="card-desc">Matte black metal frame, 24 inch circle. Makes the room feel larger and brighter — the oldest trick in interior design.</div>
+      <div class="card-meta">
+        <div class="card-stars"><span class="stars-filled">★★★★☆</span><span class="stars-count">4.5</span></div>
+        <div class="card-price"><sup>CA</sup>$45<sub>+</sub></div>
+      </div>
+      <a class="btn-amazon" href="https://www.amazon.ca/s?k=Growsun+black+round+wall+mirror+24+inch&tag=YOURTAG-20" target="_blank" rel="noopener sponsored">View on Amazon <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-wordmark">Living Room Guide</div>
+  <p>
+    This page contains Amazon affiliate links. If you purchase through a link, we may earn a small commission at no additional cost to you.<br><br>
+    All prices listed are approximate starting prices in Canadian dollars and may vary.<br>
+    <a href="https://www.amazon.ca" target="_blank">amazon.ca</a> &nbsp;&middot;&nbsp; Product availability subject to change.
+  </p>
+</footer>
+
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('progress').style.width = (s / h * 100) + '%';
+    document.getElementById('backTop').classList.toggle('visible', s > 300);
+  });
+
+  function filter(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    let count = 0;
+    document.querySelectorAll('.card').forEach(c => {
+      const show = cat === 'all' || c.dataset.cat === cat;
+      c.classList.toggle('hidden', !show);
+      if (show) count++;
+    });
+    document.getElementById('countBar').innerHTML = '<strong>' + count + '</strong> product' + (count !== 1 ? 's' : '') + ' shown';
+  }
+</script>
+
+</body>
+</html>
