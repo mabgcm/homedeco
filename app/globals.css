@@ -1454,18 +1454,27 @@ img {
 }
 
 .shop-card-media {
+  display: block;
   position: relative;
   width: 100%;
   border: none;
   padding: 0;
   cursor: pointer;
   background: transparent;
+  text-decoration: none;
 }
 
 .shop-card-media img {
   width: 100%;
   aspect-ratio: 1 / 1.02;
   object-fit: cover;
+  display: block;
+}
+
+.shop-card--amazon .shop-card-media img {
+  object-fit: contain;
+  background: #fff;
+  padding: 20px;
 }
 
 .shop-card-badge {
@@ -1477,6 +1486,11 @@ img {
   border-radius: 999px;
   background: rgba(255, 250, 245, 0.84);
   font-size: 0.78rem;
+}
+
+.shop-card-badge--amazon {
+  background: rgba(255, 153, 0, 0.15);
+  color: #b45309;
 }
 
 .shop-card-copy {
@@ -2053,5 +2067,31 @@ img {
   .floating-offer-actions .primary-link,
   .floating-offer-actions .secondary-link {
     flex: 1 1 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-product {
+    min-height: 320px;
+  }
+
+  .hero-product-main {
+    min-height: 360px;
+  }
+
+  .shop-card-title {
+    font-size: 1.4rem;
+  }
+
+  .shop-card-copy {
+    padding: 16px;
+  }
+
+  .shop-card-footer strong {
+    font-size: 1.2rem;
   }
 }

@@ -1,4 +1,4 @@
-import { amazonEdit, cjProducts, storeMetrics } from "../data/products";
+import { amazonEdit, cjProducts } from "../data/products";
 import { Storefront } from "../components/storefront";
 
 export default function HomePage() {
@@ -6,7 +6,6 @@ export default function HomePage() {
     <Storefront
       amazonEdit={amazonEdit}
       cjProducts={cjProducts}
-      storeMetrics={storeMetrics}
     />
   );
 }

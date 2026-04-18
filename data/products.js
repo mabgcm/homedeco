@@ -18,12 +18,6 @@ function createPlaceholderImage(label, toneA, toneB) {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
-export const storeMetrics = [
-  { value: "Curated", label: "Edited weekly" },
-  { value: "CA / US", label: "Shipping coverage" },
-  { value: "Guest", label: "Stripe checkout" }
-];
-
 export const cjProducts = [
   {
     id: "pleated-floor-lamp",
@@ -263,32 +257,98 @@ export const amazonEdit = [
     category: "Textile",
     name: "Washable Area Rug",
     description:
-      "A practical Amazon add-on for customers who still want a familiar marketplace buy.",
+      "A machine-washable, non-slip area rug in neutral tones — great for layering under a sofa or accent chair.",
     price: "From CA$89",
-    href: "https://amzn.to/48CA7zo",
+    href: "https://amzn.to/42luBxr",
     image: "https://m.media-amazon.com/images/I/81hc5A1YahL._AC_SL1500_.jpg",
     alt: "Washable area rug in a living room"
   },
   {
+    id: "amazon-pleated-lamp",
+    category: "Lighting",
+    name: "Pleated Floor Lamp",
+    description:
+      "Soft pleated fabric shade on a slim pole — a warm accent lamp for reading corners and beside sofas.",
+    price: "From CA$59",
+    href: "https://amzn.to/4tNDHPs",
+    image: createPlaceholderImage("Pleated Lamp", "#d6b48a", "#f3e7d8"),
+    alt: "Pleated floor lamp with beige fabric shade"
+  },
+  {
     id: "amazon-pillow",
-    category: "Accent",
+    category: "Textiles",
     name: "Linen Throw Pillow Covers",
     description:
-      "Kept as a lightweight affiliate option instead of a central store product.",
+      "Natural linen pillow covers in neutral beige — a quick upgrade for any sofa or accent chair.",
     price: "From CA$18",
     href: "https://amzn.to/4mAKPvW",
     image: "https://m.media-amazon.com/images/I/81acVMqDBqL._AC_UL320_.jpg",
     alt: "Neutral linen throw pillow covers on a sofa"
   },
   {
+    id: "amazon-arc-lamp",
+    category: "Lighting",
+    name: "Black Arc Floor Lamp",
+    description:
+      "Modern arched floor lamp with adjustable hanging shade — a sculptural statement over a lounge chair or sofa.",
+    price: "From CA$79",
+    href: "https://amzn.to/4mDmIgo",
+    image: createPlaceholderImage("Arc Lamp", "#84776e", "#d8d0c9"),
+    alt: "Black arc floor lamp in a modern living room"
+  },
+  {
+    id: "amazon-vase-set",
+    category: "Living room",
+    name: "Ceramic Vase Set of 3",
+    description:
+      "Matte neutral ceramic vases in three heights — easy to style on shelves, consoles, and mantels.",
+    price: "From CA$32",
+    href: "https://amzn.to/4tQ3F4M",
+    image: createPlaceholderImage("Vase Set", "#c4ae96", "#eee2d4"),
+    alt: "Set of three neutral white ceramic vases on a shelf"
+  },
+  {
     id: "amazon-mirror",
     category: "Wall decor",
     name: "Round Wall Mirror",
     description:
-      "Useful as an affiliate fallback when you do not want to stock or source the mirror directly.",
+      "A clean round mirror that adds depth and light — works in entryways, living rooms, and above consoles.",
     price: "From CA$45",
-    href: "https://amzn.to/4cj98vb",
+    href: "https://amzn.to/4tiIiJo",
     image: "https://m.media-amazon.com/images/I/81O5y5p+kXL._AC_SL1500_.jpg",
     alt: "Round wall mirror mounted in a living room"
+  },
+  {
+    id: "amazon-pillow-covers-neutral",
+    category: "Textiles",
+    name: "MIULEE Linen Pillow Covers",
+    description:
+      "Set of 4 boho farmhouse pillow covers in soft neutral tones — pairs well with chenille and solid cushions.",
+    price: "From CA$22",
+    href: "https://amzn.to/4tjlZU1",
+    image: createPlaceholderImage("Pillow Covers", "#c3b397", "#eee6d7"),
+    alt: "Neutral linen pillow covers stacked on a sofa"
+  },
+  {
+    id: "amazon-wall-art",
+    category: "Wall decor",
+    name: "Abstract Canvas Wall Art",
+    description:
+      "Framed neutral abstract print in warm brown and beige — a quiet gallery-wall anchor for living rooms.",
+    price: "From CA$48",
+    href: "https://amzn.to/485xwxN",
+    image: createPlaceholderImage("Wall Art", "#af9c8e", "#ebe0d7"),
+    alt: "Framed neutral abstract canvas wall art"
+  },
+  {
+    id: "amazon-resin-statue",
+    category: "Living room",
+    name: "Romantic Resin Couple Statue",
+    description:
+      "Minimal modern sculpture — a giftable shelf accent for bedside tables, consoles, and bookshelf styling.",
+    price: "From CA$28",
+    href: "https://amzn.to/4tjKoZA",
+    image: createPlaceholderImage("Resin Duo", "#d0c2b2", "#f1e8de"),
+    alt: "Romantic resin couple figurine on a shelf"
   }
 ];

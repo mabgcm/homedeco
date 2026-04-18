@@ -13,43 +13,6 @@ const filters = [
   { id: "wall", label: "Wall decor" }
 ];
 
-const moods = [
-  {
-    id: "living",
-    label: "Layered living",
-    copy: "Rounded silhouettes, warm neutrals, and quiet texture."
-  },
-  {
-    id: "lighting",
-    label: "Soft glow",
-    copy: "Statement floor lamps and softer evening ambience."
-  },
-  {
-    id: "textiles",
-    label: "Textile depth",
-    copy: "Pillow covers and tactile accents that lift plain sofas."
-  },
-  {
-    id: "wall",
-    label: "Clean walls",
-    copy: "Art and decor that finish the room without clutter."
-  }
-];
-
-const featureBlocks = [
-  {
-    title: "Secure guest checkout",
-    text: "Stripe-powered payment, no marketplace account required."
-  },
-  {
-    title: "Curated, not crowded",
-    text: "Edited home decor assortment instead of a generic mega-catalog."
-  },
-  {
-    title: "Designed to layer",
-    text: "Lamps, textiles, and sculptural accents chosen to work together in one room."
-  }
-];
 
 const currencyFormatter = new Intl.NumberFormat("en-CA", {
   style: "currency",
@@ -60,7 +23,7 @@ function getCollectionTitle(activeFilter) {
   return filters.find((filter) => filter.id === activeFilter)?.label || "All products";
 }
 
-export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
+export function Storefront({ cjProducts, amazonEdit }) {
   const router = useRouter();
   const { cartItems, cartCount, subtotal, addItem, updateQuantity, hydrated } =
     useCart();
@@ -80,14 +43,23 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
     return catalog.filter((product) => product.category === activeFilter);
   }, [activeFilter, catalog]);
 
+  const mergedProducts = useMemo(() => {
+    const result = [];
+    let amazonIdx = 0;
+    filteredProducts.forEach((product, i) => {
+      result.push(product);
+      if ((i + 1) % 2 === 0 && amazonIdx < amazonEdit.length) {
+        result.push({ ...amazonEdit[amazonIdx], isAffiliate: true });
+        amazonIdx++;
+      }
+    });
+    return result;
+  }, [filteredProducts, amazonEdit]);
+
   const highlightedProducts = useMemo(() => catalog.slice(0, 3), [catalog]);
   const featuredOffer = useMemo(
     () => filteredProducts[0] || catalog[0] || null,
     [filteredProducts, catalog]
-  );
-  const secondaryOffer = useMemo(
-    () => highlightedProducts[1] || highlightedProducts[0] || null,
-    [highlightedProducts]
   );
 
   useEffect(() => {
@@ -185,7 +157,6 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
         </Link>
         <nav className="store-nav">
           <a href="#shop">Shop</a>
-          <a href="#rooms">Rooms</a>
           <a href="#amazon-edit">Amazon add-ons</a>
         </nav>
         <div className="store-header-actions">
@@ -211,14 +182,6 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
             <a href="#amazon-edit" className="secondary-link">
               Browse Amazon add-ons
             </a>
-          </div>
-          <div className="store-hero-metrics">
-            {storeMetrics.map((metric) => (
-              <article key={metric.label} className="store-mini-stat">
-                <strong>{metric.value}</strong>
-                <span>{metric.label}</span>
-              </article>
-            ))}
           </div>
         </div>
 
@@ -270,80 +233,6 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
         </div>
       </section>
 
-      <section className="feature-strip">
-        {featureBlocks.map((feature) => (
-          <article key={feature.title} className="feature-card">
-            <strong>{feature.title}</strong>
-            <p>{feature.text}</p>
-            <Link href={featuredOffer ? `/products/${featuredOffer.id}` : "#shop"} className="inline-cta">
-              Shop now
-            </Link>
-          </article>
-        ))}
-      </section>
-
-      <section id="rooms" className="mood-section">
-        <div className="store-section-head">
-          <div>
-            <p className="eyebrow">Shop by mood</p>
-            <h2>Start with the room feeling you want.</h2>
-          </div>
-        </div>
-        <div className="mood-grid">
-          {moods.map((mood) => (
-            <button
-              key={mood.id}
-              type="button"
-              className="mood-card"
-              onClick={() => {
-                setActiveFilter(mood.id);
-                document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <strong>{mood.label}</strong>
-              <span>{mood.copy}</span>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="editorial-section">
-        <article className="editorial-card editorial-large">
-          <p className="eyebrow">Room recipe</p>
-          <h2>One statement lamp. One tactile textile. One object with shape.</h2>
-          <p>
-            That is the fastest path to a room that looks styled instead of merely
-            furnished. The store is organized around that principle.
-          </p>
-          {featuredOffer ? (
-            <div className="editorial-offer">
-              <span>{featuredOffer.name}</span>
-              <strong>{currencyFormatter.format(featuredOffer.priceInCents / 100)}</strong>
-              <Link href={`/products/${featuredOffer.id}`} className="inline-cta">
-                View product
-              </Link>
-            </div>
-          ) : null}
-        </article>
-        <article className="editorial-card">
-          <p className="eyebrow">What to expect</p>
-          <h3>Large imagery, calm navigation, and clear delivery details.</h3>
-          <p>
-            Browse quickly, open a full product page, and check out without
-            digging through cluttered menus or endless catalog pages.
-          </p>
-          {secondaryOffer ? (
-            <div className="editorial-offer">
-              <span>{secondaryOffer.name}</span>
-              <strong>{currencyFormatter.format(secondaryOffer.priceInCents / 100)}</strong>
-              <Link href={`/products/${secondaryOffer.id}`} className="inline-cta">
-                Shop the detail
-              </Link>
-            </div>
-          ) : null}
-        </article>
-      </section>
-
       <section id="shop" className="shop-section">
         <div className="store-section-head">
           <div>
@@ -370,7 +259,55 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
 
         <div className="shop-grid">
           <div className="shop-products">
-            {filteredProducts.map((product) => {
+            {mergedProducts.map((product) => {
+              if (product.isAffiliate) {
+                return (
+                  <article key={`amz-${product.id}`} className="shop-card shop-card--amazon">
+                    <a
+                      href={product.href}
+                      target="_blank"
+                      rel="noopener sponsored"
+                      className="shop-card-media"
+                    >
+                      <img src={product.image} alt={product.alt} loading="lazy" />
+                      <span className="shop-card-badge shop-card-badge--amazon">Amazon</span>
+                    </a>
+
+                    <div className="shop-card-copy">
+                      <div className="shop-card-meta">
+                        <span>{product.category}</span>
+                        <span>Affiliate link</span>
+                      </div>
+                      <a
+                        href={product.href}
+                        target="_blank"
+                        rel="noopener sponsored"
+                        className="shop-card-title"
+                      >
+                        {product.name}
+                      </a>
+                      <p>{product.description}</p>
+                      <div className="shop-card-footer">
+                        <div>
+                          <strong>{product.price}</strong>
+                          <span>Ships via Amazon</span>
+                        </div>
+                        <div className="shop-card-actions">
+                          <a
+                            href={product.href}
+                            target="_blank"
+                            rel="noopener sponsored"
+                            className="add-button"
+                          >
+                            View on Amazon
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                );
+              }
+
               const canPurchase = product.priceInCents > 0;
 
               return (
