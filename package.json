@@ -1,0 +1,15 @@
+{
+  "name": "linen-and-form",
+  "private": true,
+  "scripts": {
+    "dev": "zsh ./scripts/next.sh dev",
+    "build": "zsh ./scripts/next.sh build",
+    "start": "zsh ./scripts/next.sh start"
+  },
+  "dependencies": {
+    "next": "^15",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "stripe": "^18"
+  }
+}
