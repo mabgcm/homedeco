@@ -66,6 +66,7 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
     useCart();
   const [catalog, setCatalog] = useState(cjProducts);
   const [activeFilter, setActiveFilter] = useState("all");
+  const [offerBarDismissed, setOfferBarDismissed] = useState(false);
   const [checkoutState, setCheckoutState] = useState({
     loading: false,
     message: ""
@@ -540,8 +541,16 @@ export function Storefront({ cjProducts, amazonEdit, storeMetrics }) {
         </div>
       </footer>
 
-      {featuredOffer ? (
+      {featuredOffer && !offerBarDismissed ? (
         <div className="floating-offer-bar">
+          <button
+            type="button"
+            className="floating-offer-close"
+            aria-label="Close offer bar"
+            onClick={() => setOfferBarDismissed(true)}
+          >
+            ×
+          </button>
           <Link href={`/products/${featuredOffer.id}`} className="floating-offer-item">
             <img src={featuredOffer.image} alt={featuredOffer.name} />
             <div>

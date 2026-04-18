@@ -2,9 +2,9 @@
   "name": "linen-and-form",
   "private": true,
   "scripts": {
-    "dev": "zsh ./scripts/next.sh dev",
-    "build": "zsh ./scripts/next.sh build",
-    "start": "zsh ./scripts/next.sh start"
+    "dev": "bash ./scripts/next.sh dev",
+    "build": "bash ./scripts/next.sh build",
+    "start": "bash ./scripts/next.sh start"
   },
   "dependencies": {
     "next": "^15",
