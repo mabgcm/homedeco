@@ -170,6 +170,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
         <nav className="store-nav">
           <a href="#shop">Shop</a>
           <a href="#amazon-edit">Amazon add-ons</a>
+          <Link href="/track">Track order</Link>
         </nav>
         <div className="store-header-actions">
           <a href="#cart" className="cart-chip">
