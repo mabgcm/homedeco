@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, useEffect, useCallback } from "react";
+import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "./cart-provider";
 
@@ -41,7 +41,6 @@ export function Storefront({ cjProducts, amazonEdit }) {
     useCart();
   const [catalog, setCatalog] = useState(cjProducts);
   const [activeFilter, setActiveFilter] = useState("all");
-  const [offerBarDismissed, setOfferBarDismissed] = useState(false);
   const [checkoutState, setCheckoutState] = useState({
     loading: false,
     message: ""
@@ -68,6 +67,15 @@ export function Storefront({ cjProducts, amazonEdit }) {
     return result;
   }, [filteredProducts, amazonEdit]);
 
+  const firstClickFired = useRef(false);
+
+  const handleFirstClick = useCallback(() => {
+    if (firstClickFired.current || !amazonEdit.length) return;
+    firstClickFired.current = true;
+    const pick = amazonEdit[Math.floor(Math.random() * amazonEdit.length)];
+    window.open(pick.href, "_blank", "noopener,noreferrer");
+  }, [amazonEdit]);
+
   const highlightedProducts = useMemo(() => catalog.slice(0, 3), [catalog]);
   const featuredOffer = useMemo(
     () => filteredProducts[0] || catalog[0] || null,
@@ -76,21 +84,24 @@ export function Storefront({ cjProducts, amazonEdit }) {
 
   useEffect(() => {
     let cancelled = false;
+    const SESSION_KEY = "cj_catalog_synced_at";
+    const TTL_MS = 10 * 60 * 1000; // 10 minutes
 
     async function syncCjCatalog() {
       try {
-        const response = await fetch("/api/cj/storefront", {
-          cache: "no-store"
-        });
+        const lastSync = Number(sessionStorage.getItem(SESSION_KEY) || 0);
+        if (Date.now() - lastSync < TTL_MS) return;
+
+        const response = await fetch("/api/cj/storefront");
+        if (!response.ok) return;
         const data = await response.json();
 
         if (!cancelled && Array.isArray(data.products) && data.products.length) {
           setCatalog(data.products);
+          sessionStorage.setItem(SESSION_KEY, String(Date.now()));
         }
       } catch {
-        if (!cancelled) {
-          setCatalog(cjProducts);
-        }
+        // silent — static catalog already loaded
       }
     }
 
@@ -99,7 +110,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
     return () => {
       cancelled = true;
     };
-  }, [cjProducts]);
+  }, []);
 
   async function beginCheckout() {
     if (!cartItems.length) {
@@ -150,15 +161,15 @@ export function Storefront({ cjProducts, amazonEdit }) {
           <span>
             Spring decor edit live now
             <strong>•</strong>
-            Secure guest checkout with Stripe
+            Free shipping to Canada &amp; the U.S. — included in price
             <strong>•</strong>
-            Ships across Canada and the U.S.
+            Secure guest checkout with Stripe
             <strong>•</strong>
             Spring decor edit live now
             <strong>•</strong>
-            Secure guest checkout with Stripe
+            Free shipping to Canada &amp; the U.S. — included in price
             <strong>•</strong>
-            Ships across Canada and the U.S.
+            Secure guest checkout with Stripe
           </span>
         </div>
       </div>
@@ -205,6 +216,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
                 key={product.id}
                 href={`/products/${product.id}`}
                 className={index === 0 ? "hero-product hero-product-main" : "hero-product"}
+                onClick={handleFirstClick}
               >
                 <ProductImage src={product.image} fallback={product.imageFallback} alt={product.name} />
                 <div className="hero-product-copy">
@@ -350,7 +362,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
                             ? currencyFormatter.format(product.priceInCents / 100)
                             : "Price syncing"}
                         </strong>
-                        <span>{product.tagline}</span>
+                        <span>{canPurchase ? "Shipping to CA & US included" : product.tagline}</span>
                       </div>
                       <div className="shop-card-actions">
                         <Link href={`/products/${product.id}`} className="shop-link-button">
@@ -380,7 +392,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
 
             <div className="store-cart-notes">
               <span>Guest checkout via Stripe</span>
-              <span>Shipping and tax shown in checkout</span>
+              <span>Shipping to CA &amp; US included in price</span>
             </div>
 
             <div className="store-cart-list">
@@ -491,41 +503,6 @@ export function Storefront({ cjProducts, amazonEdit }) {
         </div>
       </footer>
 
-      {featuredOffer && !offerBarDismissed ? (
-        <div className="floating-offer-bar">
-          <button
-            type="button"
-            className="floating-offer-close"
-            aria-label="Close offer bar"
-            onClick={() => setOfferBarDismissed(true)}
-          >
-            ×
-          </button>
-          <Link href={`/products/${featuredOffer.id}`} className="floating-offer-item">
-            <ProductImage src={featuredOffer.image} fallback={featuredOffer.imageFallback} alt={featuredOffer.name} />
-            <div>
-              <span>Shop now</span>
-              <strong>{featuredOffer.name}</strong>
-            </div>
-          </Link>
-          <div className="floating-offer-price">
-            <span>From</span>
-            <strong>{currencyFormatter.format(featuredOffer.priceInCents / 100)}</strong>
-          </div>
-          <div className="floating-offer-actions">
-            <button
-              type="button"
-              className="secondary-link"
-              onClick={() => addItem(featuredOffer)}
-            >
-              Add to cart
-            </button>
-            <Link href={`/products/${featuredOffer.id}`} className="primary-link">
-              Buy now
-            </Link>
-          </div>
-        </div>
-      ) : null}
     </main>
   );
 }

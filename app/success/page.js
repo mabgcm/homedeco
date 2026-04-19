@@ -4,8 +4,9 @@ export const metadata = {
   title: "Order Confirmed | Linen & Form"
 };
 
-export default function SuccessPage({ searchParams }) {
-  const sessionId = searchParams?.session_id || "";
+export default async function SuccessPage({ searchParams }) {
+  const params = await searchParams;
+  const sessionId = params?.session_id || "";
 
   return (
     <main className="status-page">

@@ -13,37 +13,47 @@ const currencyFormatter = new Intl.NumberFormat("en-CA", {
   currency: "CAD"
 });
 
-function getProduct(slug) {
-  return cjProducts.find((product) => product.id === slug);
+const hasCjCredentials = Boolean(
+  process.env.CJ_API_KEY || process.env.CJ_ACCESS_TOKEN
+);
+
+function getStaticProduct(slug) {
+  return cjProducts.find((product) => product.id === slug) || null;
+}
+
+async function resolveProduct(slug) {
+  const staticProduct = getStaticProduct(slug);
+
+  if (!hasCjCredentials) {
+    return staticProduct;
+  }
+
+  if (staticProduct) {
+    try {
+      return (await getStorefrontProductBySlug(slug)) || staticProduct;
+    } catch {
+      return staticProduct;
+    }
+  }
+
+  try {
+    const cjProduct = await getCjProductByPid(slug);
+    return cjProduct ? mapCjProductToStorefront(cjProduct) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function generateStaticParams() {
+  return cjProducts.map((product) => ({ slug: product.id }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  let product = getProduct(slug);
-
-  if (product) {
-    try {
-      product = (await getStorefrontProductBySlug(slug)) || product;
-    } catch {
-      product = getProduct(slug);
-    }
-  }
-
-  if (!product && (process.env.CJ_API_KEY || process.env.CJ_ACCESS_TOKEN)) {
-    try {
-      const cjProduct = await getCjProductByPid(slug);
-      if (cjProduct) {
-        product = mapCjProductToStorefront(cjProduct);
-      }
-    } catch {
-      product = null;
-    }
-  }
+  const product = await resolveProduct(slug);
 
   if (!product) {
-    return {
-      title: "Product Not Found | Linen & Form"
-    };
+    return { title: "Product Not Found | Linen & Form" };
   }
 
   return {
@@ -54,26 +64,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductPage({ params }) {
   const { slug } = await params;
-  let product = getProduct(slug);
-
-  if (product) {
-    try {
-      product = (await getStorefrontProductBySlug(slug)) || product;
-    } catch {
-      product = getProduct(slug);
-    }
-  }
-
-  if (!product && (process.env.CJ_API_KEY || process.env.CJ_ACCESS_TOKEN)) {
-    try {
-      const cjProduct = await getCjProductByPid(slug);
-      if (cjProduct) {
-        product = mapCjProductToStorefront(cjProduct);
-      }
-    } catch {
-      product = null;
-    }
-  }
+  const product = await resolveProduct(slug);
 
   if (!product) {
     notFound();
@@ -116,8 +107,8 @@ export default async function ProductPage({ params }) {
 
             <div className="pdp-meta">
               <span>Soft-modern decor</span>
-              <span>Ships to CA/US</span>
-              <span>Secure checkout</span>
+              <span>Free shipping to CA &amp; US — included in price</span>
+              <span>Secure guest checkout</span>
             </div>
 
             <ProductPurchasePanel product={product} />

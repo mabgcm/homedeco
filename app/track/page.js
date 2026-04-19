@@ -4,8 +4,9 @@ export const metadata = {
   title: "Track Your Order | Linen & Form"
 };
 
-export default function TrackPage({ searchParams }) {
-  const sessionId = searchParams?.session_id || "";
+export default async function TrackPage({ searchParams }) {
+  const params = await searchParams;
+  const sessionId = params?.session_id || "";
 
   return (
     <main className="status-page">

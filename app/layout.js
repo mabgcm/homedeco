@@ -39,8 +39,8 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-CA">
-      <body>
+    <html lang="en-CA" data-scroll-behavior="smooth">
+      <body suppressHydrationWarning>
         <CartProvider>{children}</CartProvider>
         <script
           type="application/ld+json"
