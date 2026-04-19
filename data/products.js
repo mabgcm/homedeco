@@ -40,7 +40,8 @@ export const cjProducts = [
     leadTime: "Oversized item, allow extra delivery time",
     visualLabel: "Pleated Lamp",
     tones: ["#d6b48a", "#f3e7d8"],
-    image: createPlaceholderImage("Pleated Lamp", "#d6b48a", "#f3e7d8")
+    image: "/images/products/pleated-floor-lamp.jpeg",
+    imageFallback: createPlaceholderImage("Pleated Lamp", "#d6b48a", "#f3e7d8")
   },
   {
     id: "black-arc-floor-lamp",
@@ -63,7 +64,8 @@ export const cjProducts = [
     leadTime: "Oversized item, allow extra delivery time",
     visualLabel: "Arc Lamp",
     tones: ["#84776e", "#d8d0c9"],
-    image: createPlaceholderImage("Arc Lamp", "#84776e", "#d8d0c9")
+    image: "/images/products/black-arc-floor-lamp.jpeg",
+    imageFallback: createPlaceholderImage("Arc Lamp", "#84776e", "#d8d0c9")
   },
   {
     id: "light-luxury-vase",
@@ -86,7 +88,8 @@ export const cjProducts = [
     leadTime: "Standard decor delivery window",
     visualLabel: "Ceramic Vase",
     tones: ["#c4ae96", "#eee2d4"],
-    image: createPlaceholderImage("Ceramic Vase", "#c4ae96", "#eee2d4")
+    image: "/images/products/light-luxury-vase.jpeg",
+    imageFallback: createPlaceholderImage("Ceramic Vase", "#c4ae96", "#eee2d4")
   },
   {
     id: "white-ceramic-vase",
@@ -109,7 +112,8 @@ export const cjProducts = [
     leadTime: "Standard decor delivery window",
     visualLabel: "White Vase",
     tones: ["#d7d1ca", "#f7f3ed"],
-    image: createPlaceholderImage("White Vase", "#d7d1ca", "#f7f3ed")
+    image: "/images/products/white-ceramic-vase.jpeg",
+    imageFallback: createPlaceholderImage("White Vase", "#d7d1ca", "#f7f3ed")
   },
   {
     id: "body-shape-vase",
@@ -132,7 +136,8 @@ export const cjProducts = [
     leadTime: "Standard decor delivery window",
     visualLabel: "Body Vase",
     tones: ["#bea89e", "#efe4dc"],
-    image: createPlaceholderImage("Body Vase", "#bea89e", "#efe4dc")
+    image: "/images/products/body-shape-vase.jpeg",
+    imageFallback: createPlaceholderImage("Body Vase", "#bea89e", "#efe4dc")
   },
   {
     id: "linen-pillow-cover",
@@ -155,7 +160,8 @@ export const cjProducts = [
     leadTime: "Standard textile delivery window",
     visualLabel: "Linen Cover",
     tones: ["#c3b397", "#eee6d7"],
-    image: createPlaceholderImage("Linen Cover", "#c3b397", "#eee6d7")
+    image: "/images/products/linen-pillow-cover.jpeg",
+    imageFallback: createPlaceholderImage("Linen Cover", "#c3b397", "#eee6d7")
   },
   {
     id: "chenille-pillow-cover",
@@ -178,7 +184,8 @@ export const cjProducts = [
     leadTime: "Standard textile delivery window",
     visualLabel: "Chenille",
     tones: ["#bda892", "#ede1d0"],
-    image: createPlaceholderImage("Chenille", "#bda892", "#ede1d0")
+    image: "/images/products/chenille-pillow-cover.jpeg",
+    imageFallback: createPlaceholderImage("Chenille", "#bda892", "#ede1d0")
   },
   {
     id: "abstract-wall-art",
@@ -201,7 +208,8 @@ export const cjProducts = [
     leadTime: "Flat-pack delivery window",
     visualLabel: "Wall Art",
     tones: ["#af9c8e", "#ebe0d7"],
-    image: createPlaceholderImage("Wall Art", "#af9c8e", "#ebe0d7")
+    image: "/images/products/abstract-wall-art.jpeg",
+    imageFallback: createPlaceholderImage("Wall Art", "#af9c8e", "#ebe0d7")
   },
   {
     id: "wall-shelf-unit",
@@ -224,7 +232,8 @@ export const cjProducts = [
     leadTime: "Large parcel delivery window",
     visualLabel: "Wall Shelf",
     tones: ["#8f7c68", "#ddd4ca"],
-    image: createPlaceholderImage("Wall Shelf", "#8f7c68", "#ddd4ca")
+    image: "/images/products/wall-shelf-unit.jpeg",
+    imageFallback: createPlaceholderImage("Wall Shelf", "#8f7c68", "#ddd4ca")
   },
   {
     id: "couple-resin-statue",
@@ -247,7 +256,8 @@ export const cjProducts = [
     leadTime: "Standard decor delivery window",
     visualLabel: "Resin Duo",
     tones: ["#d0c2b2", "#f1e8de"],
-    image: createPlaceholderImage("Resin Duo", "#d0c2b2", "#f1e8de")
+    image: "/images/products/couple-resin-statue.jpeg",
+    imageFallback: createPlaceholderImage("Resin Duo", "#d0c2b2", "#f1e8de")
   }
 ];
 
@@ -271,7 +281,7 @@ export const amazonEdit = [
       "Soft pleated fabric shade on a slim pole — a warm accent lamp for reading corners and beside sofas.",
     price: "From CA$59",
     href: "https://amzn.to/4tNDHPs",
-    image: createPlaceholderImage("Pleated Lamp", "#d6b48a", "#f3e7d8"),
+    image: "https://m.media-amazon.com/images/I/419InZnGtHL._AC_SL1500_.jpg",
     alt: "Pleated floor lamp with beige fabric shade"
   },
   {
@@ -293,7 +303,7 @@ export const amazonEdit = [
       "Modern arched floor lamp with adjustable hanging shade — a sculptural statement over a lounge chair or sofa.",
     price: "From CA$79",
     href: "https://amzn.to/4mDmIgo",
-    image: createPlaceholderImage("Arc Lamp", "#84776e", "#d8d0c9"),
+    image: "https://m.media-amazon.com/images/I/71oxEIQadtL._AC_SL1500_.jpg",
     alt: "Black arc floor lamp in a modern living room"
   },
   {
@@ -304,7 +314,7 @@ export const amazonEdit = [
       "Matte neutral ceramic vases in three heights — easy to style on shelves, consoles, and mantels.",
     price: "From CA$32",
     href: "https://amzn.to/4tQ3F4M",
-    image: createPlaceholderImage("Vase Set", "#c4ae96", "#eee2d4"),
+    image: "https://m.media-amazon.com/images/I/61lkdy0uAML._AC_SL1500_.jpg",
     alt: "Set of three neutral white ceramic vases on a shelf"
   },
   {
@@ -326,7 +336,7 @@ export const amazonEdit = [
       "Set of 4 boho farmhouse pillow covers in soft neutral tones — pairs well with chenille and solid cushions.",
     price: "From CA$22",
     href: "https://amzn.to/4tjlZU1",
-    image: createPlaceholderImage("Pillow Covers", "#c3b397", "#eee6d7"),
+    image: "https://m.media-amazon.com/images/I/81Ez4LqQS2L._AC_SL1500_.jpg",
     alt: "Neutral linen pillow covers stacked on a sofa"
   },
   {
@@ -337,7 +347,7 @@ export const amazonEdit = [
       "Framed neutral abstract print in warm brown and beige — a quiet gallery-wall anchor for living rooms.",
     price: "From CA$48",
     href: "https://amzn.to/485xwxN",
-    image: createPlaceholderImage("Wall Art", "#af9c8e", "#ebe0d7"),
+    image: "https://m.media-amazon.com/images/I/71iEop0+i8L._AC_SL1500_.jpg",
     alt: "Framed neutral abstract canvas wall art"
   },
   {
@@ -348,7 +358,7 @@ export const amazonEdit = [
       "Minimal modern sculpture — a giftable shelf accent for bedside tables, consoles, and bookshelf styling.",
     price: "From CA$28",
     href: "https://amzn.to/4tjKoZA",
-    image: createPlaceholderImage("Resin Duo", "#d0c2b2", "#f1e8de"),
+    image: "https://m.media-amazon.com/images/I/714CXqpnKJL._AC_SL1500_.jpg",
     alt: "Romantic resin couple figurine on a shelf"
   }
 ];

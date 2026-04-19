@@ -1,9 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "./cart-provider";
+
+function ProductImage({ src, fallback, alt, ...props }) {
+  const handleError = useCallback(
+    (e) => {
+      if (fallback && e.target.src !== fallback) {
+        e.target.src = fallback;
+      }
+    },
+    [fallback]
+  );
+  return <img src={src} alt={alt} onError={handleError} {...props} />;
+}
 
 const filters = [
   { id: "all", label: "All products" },
@@ -193,7 +205,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
                 href={`/products/${product.id}`}
                 className={index === 0 ? "hero-product hero-product-main" : "hero-product"}
               >
-                <img src={product.image} alt={product.name} />
+                <ProductImage src={product.image} fallback={product.imageFallback} alt={product.name} />
                 <div className="hero-product-copy">
                   <span>{product.collection}</span>
                   <strong>{product.name}</strong>
@@ -269,7 +281,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
                       rel="noopener sponsored"
                       className="shop-card-media"
                     >
-                      <img src={product.image} alt={product.alt} loading="lazy" />
+                      <ProductImage src={product.image} fallback={product.imageFallback} alt={product.alt} loading="lazy" />
                       <span className="shop-card-badge shop-card-badge--amazon">Amazon</span>
                     </a>
 
@@ -317,7 +329,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
                     className="shop-card-media"
                     onClick={() => router.push(`/products/${product.id}`)}
                   >
-                    <img src={product.image} alt={product.name} />
+                    <ProductImage src={product.image} fallback={product.imageFallback} alt={product.name} />
                     <span className="shop-card-badge">{product.collection}</span>
                   </button>
 
@@ -374,7 +386,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
               {cartItems.length ? (
                 cartItems.map((item) => (
                   <div key={item.id} className="store-cart-item">
-                    <img src={item.image} alt={item.name} />
+                    <ProductImage src={item.image} fallback={item.imageFallback} alt={item.name} />
                     <div className="store-cart-copy">
                       <strong>{item.name}</strong>
                       <span>{currencyFormatter.format(item.priceInCents / 100)}</span>
@@ -489,7 +501,7 @@ export function Storefront({ cjProducts, amazonEdit }) {
             ×
           </button>
           <Link href={`/products/${featuredOffer.id}`} className="floating-offer-item">
-            <img src={featuredOffer.image} alt={featuredOffer.name} />
+            <ProductImage src={featuredOffer.image} fallback={featuredOffer.imageFallback} alt={featuredOffer.name} />
             <div>
               <span>Shop now</span>
               <strong>{featuredOffer.name}</strong>
