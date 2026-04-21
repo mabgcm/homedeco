@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { CartProvider } from "../components/cart-provider";
 
 export const metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
     <html lang="en-CA" data-scroll-behavior="smooth">
       <body suppressHydrationWarning>
         <CartProvider>{children}</CartProvider>
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
